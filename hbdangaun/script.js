@@ -14,14 +14,16 @@ popImage.addEventListener('mousedown', () => {
   document.getElementById('score').textContent = score;
   localStorage.setItem('popScore', score); // บันทึกคะแนน
   popImage.src = 'assets/baby-grape.png'; // เปลี่ยนภาพเมื่อคลิก
+  console.log('Image changed to baby-grape.png'); // Debugging
 });
 
-// คืนภาพเดิมเมื่อปล่อยคลิก
+// ฟังก์ชันคืนภาพเดิมเมื่อปล่อยคลิก
 popImage.addEventListener('mouseup', () => {
-  popImage.src = 'assets/grape.png';
+  popImage.src = 'assets/grape.png'; // เปลี่ยนกลับเป็นภาพเดิม
+  console.log('Image changed to grape.png'); // Debugging
 });
 
 // กรณีเลื่อนเมาส์ออกจากภาพ
 popImage.addEventListener('mouseleave', () => {
-  popImage.src = 'assets/grape.png';
+  popImage.src = 'assets/grape.png'; // เปลี่ยนกลับเป็นภาพเดิม
 });
